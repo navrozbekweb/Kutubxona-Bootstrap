@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A'zo bo'lish — Kutubxona</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<!-- 7. Konteynerli menyu (Navbar) -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-kutub sticky-top shadow">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-book-half"></i> Kutubxona</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house"></i> Bosh sahifa</a></li>
+        <li class="nav-item"><a class="nav-link" href="katalog.html"><i class="bi bi-journals"></i> Katalog</a></li>
+        <!-- 6. Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i class="bi bi-tags"></i> Janrlar</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="katalog.html#jadval">Badiiy adabiyot</a></li>
+            <li><a class="dropdown-item" href="katalog.html#jadval">Tarix</a></li>
+            <li><a class="dropdown-item" href="katalog.html#jadval">Ilmiy</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="katalog.html">Barchasi</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link active" href="aloqa.html"><i class="bi bi-person-plus"></i> A'zo bo'lish</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-5">
+  <div class="row justify-content-center">
+    <div class="col-12 col-md-10 col-lg-7">
+      <!-- 9. Panel + 4. Forma -->
+      <div class="card shadow">
+        <div class="card-header bg-kutub text-white"><h4 class="mb-0"><i class="bi bi-person-plus"></i> Kutubxonaga a'zo bo'lish</h4></div>
+        <div class="card-body p-4">
+          <form id="forma" class="needs-validation" novalidate>
+            <div class="row g-3">
+              <div class="col-md-6 form-floating"><input type="text" class="form-control" id="ism" placeholder="Ism" required><label for="ism">Ism</label><div class="invalid-feedback">Ismingizni kiriting</div></div>
+              <div class="col-md-6 form-floating"><input type="text" class="form-control" id="fam" placeholder="Familiya" required><label for="fam">Familiya</label><div class="invalid-feedback">Familiyani kiriting</div></div>
+              <div class="col-12"><label class="form-label">Email</label><div class="input-group"><span class="input-group-text"><i class="bi bi-envelope"></i></span><input type="email" class="form-control" required placeholder="email@misol.uz"><div class="invalid-feedback">To'g'ri email kiriting</div></div></div>
+              <div class="col-md-6"><label class="form-label">Telefon</label><div class="input-group"><span class="input-group-text"><i class="bi bi-telephone"></i></span><input type="tel" class="form-control" placeholder="+998 90 123 45 67" required></div></div>
+              <div class="col-md-6"><label class="form-label">Sevimli janr</label><select class="form-select" required><option value="">Tanlang...</option><option>Badiiy</option><option>Tarix</option><option>Ilmiy</option><option>Bolalar</option></select></div>
+              <div class="col-12"><label class="form-label">A'zolik turi</label><br>
+                <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="tur" id="t1" checked><label class="form-check-label" for="t1">Oddiy</label></div>
+                <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="tur" id="t2"><label class="form-check-label" for="t2">Talaba</label></div>
+                <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="tur" id="t3"><label class="form-check-label" for="t3">Premium</label></div></div>
+              <div class="col-12"><label class="form-label">Izoh</label><textarea class="form-control" rows="3" placeholder="Qanday kitoblarni yoqtirasiz?"></textarea></div>
+              <div class="col-12"><div class="form-check form-switch"><input class="form-check-input" type="checkbox" id="xabar"><label class="form-check-label" for="xabar">Yangi kitoblar haqida xabar olish</label></div></div>
+              <div class="col-12"><div class="form-check"><input class="form-check-input" type="checkbox" id="rozi" required><label class="form-check-label" for="rozi">Qoidalarga roziman</label><div class="invalid-feedback">Rozilik kerak</div></div></div>
+              <div class="col-12 d-grid"><button class="btn btn-kutub btn-lg" type="submit" data-bs-toggle="tooltip" title="Ma'lumotlarni yuborish"><i class="bi bi-send"></i> Yuborish</button></div>
+            </div>
+          </form>
+          <div id="natija" class="alert alert-success mt-3 d-none"><i class="bi bi-check-circle"></i> Rahmat! Siz muvaffaqiyatli ro'yxatdan o'tdingiz.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="bg-kutub text-light py-4 mt-5">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+    <span><i class="bi bi-c-circle"></i> 2026 Kutubxona — shaxsiy onlayn kutubxona</span>
+    <span class="fs-4">
+      <a href="#" class="text-light me-3" data-bs-toggle="tooltip" title="Telegram"><i class="bi bi-telegram"></i></a>
+      <a href="#" class="text-light me-3" data-bs-toggle="tooltip" title="Instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="text-light" data-bs-toggle="tooltip" title="YouTube"><i class="bi bi-youtube"></i></a>
+    </span>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Katalog — Kutubxona</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+<!-- 7. Konteynerli menyu (Navbar) -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-kutub sticky-top shadow">
+  <div class="container">
+    <a class="navbar-brand fw-bold" href="index.html"><i class="bi bi-book-half"></i> Kutubxona</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="menu">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html"><i class="bi bi-house"></i> Bosh sahifa</a></li>
+        <li class="nav-item"><a class="nav-link active" href="katalog.html"><i class="bi bi-journals"></i> Katalog</a></li>
+        <!-- 6. Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"><i class="bi bi-tags"></i> Janrlar</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="katalog.html#jadval">Badiiy adabiyot</a></li>
+            <li><a class="dropdown-item" href="katalog.html#jadval">Tarix</a></li>
+            <li><a class="dropdown-item" href="katalog.html#jadval">Ilmiy</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="katalog.html">Barchasi</a></li>
+          </ul>
+        </li>
+        <li class="nav-item"><a class="nav-link" href="aloqa.html"><i class="bi bi-person-plus"></i> A'zo bo'lish</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<main class="container my-5">
+  <h1 class="fw-bold text-kutub mb-2"><i class="bi bi-journals"></i> Kitoblar katalogi</h1>
+  <p class="text-muted mb-4">Barcha kitoblar ro'yxati. Qidiruv orqali kerakli kitobni toping.</p>
+  <div class="input-group mb-4"><span class="input-group-text"><i class="bi bi-search"></i></span><input id="qidiruv" type="text" class="form-control" placeholder="Kitob yoki muallif nomini yozing..."></div>
+
+  <!-- 3. Jadval -->
+  <div class="table-responsive shadow-sm rounded mb-5" id="jadval">
+    <table class="table table-striped table-hover table-bordered align-middle mb-0">
+      <thead class="table-dark"><tr><th>#</th><th>Rasm</th><th>Nomi</th><th>Muallif</th><th>Janr</th><th>Yil</th><th>Reyting</th><th>Holati</th></tr></thead>
+      <tbody id="kitoblar">
+        <tr><td>1</td><td><img src="img/cover1.jpg" class="rounded thumb" alt=""></td><td class="fw-semibold">O'tkan kunlar</td><td>Abdulla Qodiriy</td><td>Badiiy</td><td>1926</td><td><i class="bi bi-star-fill text-warning"></i> 4.9</td><td><span class="badge bg-danger">Band</span></td></tr>
+        <tr><td>2</td><td><img src="img/cover2.jpg" class="rounded thumb" alt=""></td><td class="fw-semibold">Kecha va kunduz</td><td>Cho'lpon</td><td>Badiiy</td><td>1936</td><td><i class="bi bi-star-fill text-warning"></i> 4.7</td><td><span class="badge bg-success">Mavjud</span></td></tr>
+        <tr><td>3</td><td><img src="img/cover3.jpg" class="rounded thumb" alt=""></td><td class="fw-semibold">Boburnoma</td><td>Zahiriddin Bobur</td><td>Tarix</td><td>1530</td><td><i class="bi bi-star-fill text-warning"></i> 4.8</td><td><span class="badge bg-success">Mavjud</span></td></tr>
+        <tr><td>4</td><td><img src="img/cover4.jpg" class="rounded thumb" alt=""></td><td class="fw-semibold">Sariq devni minib</td><td>Xudoyberdi To'xtaboyev</td><td>Bolalar</td><td>1968</td><td><i class="bi bi-star-fill text-warning"></i> 4.6</td><td><span class="badge bg-danger">Band</span></td></tr>
+        <tr><td>5</td><td><img src="img/cover5.jpg" class="rounded thumb" alt=""></td><td class="fw-semibold">Ufq</td><td>Said Ahmad</td><td>Badiiy</td><td>1974</td><td><i class="bi bi-star-fill text-warning"></i> 4.5</td><td><span class="badge bg-success">Mavjud</span></td></tr>
+        <tr><td>6</td><td><img src="img/cover6.jpg" class="rounded thumb" alt=""></td><td class="fw-semibold">Mehrobdan chayon</td><td>Abdulla Qodiriy</td><td>Badiiy</td><td>1929</td><td><i class="bi bi-star-fill text-warning"></i> 4.7</td><td><span class="badge bg-success">Mavjud</span></td></tr>
+        <tr><td>7</td><td><img src="img/cover7.jpg" class="rounded thumb" alt=""></td><td class="fw-semibold">Qisqacha vaqt tarixi</td><td>Stiven Xoking</td><td>Ilmiy</td><td>1988</td><td><i class="bi bi-star-fill text-warning"></i> 4.8</td><td><span class="badge bg-danger">Band</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- 3. Ro'yxatlar -->
+  <div class="row g-4">
+    <div class="col-12 col-md-6">
+      <h4 class="fw-bold">Janrlar</h4>
+      <ul class="list-group shadow-sm">
+        <li class="list-group-item d-flex justify-content-between align-items-center">Badiiy adabiyot <span class="badge bg-kutub rounded-pill">4</span></li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">Tarix <span class="badge bg-kutub rounded-pill">1</span></li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">Ilmiy <span class="badge bg-kutub rounded-pill">1</span></li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">Bolalar <span class="badge bg-kutub rounded-pill">1</span></li>
+      </ul>
+    </div>
+    <div class="col-12 col-md-6">
+      <h4 class="fw-bold">Kitob olish tartibi</h4>
+      <ol class="list-group list-group-numbered shadow-sm">
+        <li class="list-group-item">Ro'yxatdan o'ting</li>
+        <li class="list-group-item">Kitobni katalogdan tanlang</li>
+        <li class="list-group-item">Band qiling va kutubxonadan oling</li>
+        <li class="list-group-item list-group-item-warning">14 kun ichida qaytaring</li>
+      </ol>
+    </div>
+  </div>
+</main>
+
+<footer class="bg-kutub text-light py-4 mt-5">
+  <div class="container d-flex flex-column flex-md-row justify-content-between align-items-center gap-2">
+    <span><i class="bi bi-c-circle"></i> 2026 Kutubxona — shaxsiy onlayn kutubxona</span>
+    <span class="fs-4">
+      <a href="#" class="text-light me-3" data-bs-toggle="tooltip" title="Telegram"><i class="bi bi-telegram"></i></a>
+      <a href="#" class="text-light me-3" data-bs-toggle="tooltip" title="Instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="text-light" data-bs-toggle="tooltip" title="YouTube"><i class="bi bi-youtube"></i></a>
+    </span>
+  </div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

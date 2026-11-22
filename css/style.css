@@ -1,0 +1,12 @@
+:root{--kutub:#7a4a14;}
+body{background:#f8f5ef;font-family:Georgia,serif;}
+.bg-kutub{background:var(--kutub)!important;}
+.text-kutub{color:var(--kutub)!important;}
+.btn-kutub{background:var(--kutub);color:#fff;border-color:var(--kutub);}
+.btn-kutub:hover{background:#5c370e;color:#fff;}
+.slide-img{height:70vh;object-fit:cover;filter:brightness(.55);}
+@media(max-width:576px){.slide-img{height:45vh;}}
+.book-card img{height:280px;object-fit:cover;}
+.book-card{transition:transform .2s;}
+.book-card:hover{transform:translateY(-6px);}
+.thumb{width:48px;height:64px;object-fit:cover;}
